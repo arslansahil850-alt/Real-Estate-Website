@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover premium homes, apartments, villas and commercial properties with Estateora Real Estate.">
+    <meta name="theme-color" content="#102b46">
+    <title>Projects | Arslan Weblab</title>
+    <link rel="icon" href="logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-contact">
+                <a href="tel:+923001234567"><i data-lucide="phone"></i> +92 300 1234567</a>
+                <a href="mailto:hello@estateora.com"><i data-lucide="mail"></i> hello@estateora.com</a>
+            </div>
+            <div class="topbar-socials">
+                <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header" id="home">
+        <div class="container navbar">
+            <a href="#home" class="brand" aria-label="Estateora home">
+                <span class="brand-icon"><i data-lucide="building-2"></i></span>
+                <span>Estate<span class="brand-accent">ora</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"
+                aria-controls="navMenu">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#properties" class="nav-link">Properties</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#agents" class="nav-link">Our Agents</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#properties" class="btn btn-primary nav-cta">Explore Properties <i
+                        data-lucide="arrow-up-right"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="eyebrow hero-eyebrow"><i data-lucide="house"></i> YOUR NEXT CHAPTER STARTS HERE</span>
+                <h1>Find a Place<br>You'll Call <span>Home.</span></h1>
+                <p>Discover exceptional properties, explore beautiful neighborhoods, and find a home that fits the way
+                    you want to live.</p>
+                <div class="hero-actions">
+                    <a href="#properties" class="btn btn-gold">Explore Properties <i
+                            data-lucide="arrow-up-right"></i></a>
+                    <a href="#about" class="btn btn-outline-light">Discover Our Story</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>1,200+</strong>
+                        <span>Properties Listed</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>850+</strong>
+                        <span>Happy Clients</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>12+</strong>
+                        <span>Years of Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section" aria-label="Find a property">
+            <div class="container">
+                <form class="property-search" id="propertySearch">
+                    <div class="search-field">
+                        <label for="searchLocation">Location</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="map-pin"></i>
+                            <input type="text" id="searchLocation" placeholder="City or neighborhood">
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="searchType">Property Type</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="building"></i>
+                            <select id="searchType">
+                                <option value="">All property types</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="villa">Villa</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="searchPurpose">Purpose</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="key-round"></i>
+                            <select id="searchPurpose">
+                                <option value="">Buy or Rent</option>
+                                <option value="sale">For Sale</option>
+                                <option value="rent">For Rent</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="searchBudget">Maximum Budget</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="wallet"></i>
+                            <select id="searchBudget">
+                                <option value="">Any budget</option>
+                                <option value="5000000">Up to PKR 50 Lac</option>
+                                <option value="10000000">Up to PKR 1 Crore</option>
+                                <option value="25000000">Up to PKR 2.5 Crore</option>
+                                <option value="50000000">Up to PKR 5 Crore</option>
+                                <option value="100000000">Up to PKR 10 Crore</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary search-submit">
+                        <i data-lucide="search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section properties-section" id="properties">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">HANDPICKED FOR YOU</span>
+                        <h2>Explore Our <span>Properties</span></h2>
+                        <p>Thoughtfully selected properties to match your lifestyle and investment goals.</p>
+                    </div>
+                    <a href="#properties" class="text-link" id="viewAllProperties">View All Properties <i
+                            data-lucide="arrow-right"></i></a>
+                </div>
+
+                <div class="property-toolbar">
+                    <div class="filter-tabs" id="propertyFilters">
+                        <button type="button" class="filter-btn active" data-filter="all">All Properties</button>
+                        <button type="button" class="filter-btn" data-filter="sale">For Sale</button>
+                        <button type="button" class="filter-btn" data-filter="rent">For Rent</button>
+                    </div>
+                    <label class="sort-control" for="propertySort">
+                        <i data-lucide="arrow-down-up"></i>
+                        <select id="propertySort">
+                            <option value="featured">Featured First</option>
+                            <option value="low">Price: Low to High</option>
+                            <option value="high">Price: High to Low</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="property-grid" id="propertyGrid">
+
+                    <article class="property-card" data-id="1" data-type="house" data-purpose="sale"
+                        data-price="28500000" data-location="dha lahore" data-featured="1">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85"
+                                alt="Contemporary luxury house with landscaped garden" loading="lazy">
+                            <span class="property-badge">Featured</span>
+                            <button class="favorite-btn" type="button" aria-label="Add Modern Family House to favorites"
+                                aria-pressed="false"><i data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> DHA Phase 6, Lahore</div>
+                            <h3>Modern Family House</h3>
+                            <p class="property-price">PKR 2.85 Crore</p>
+                            <div class="property-features">
+                                <span><i data-lucide="bed-double"></i> 5 Beds</span>
+                                <span><i data-lucide="bath"></i> 4 Baths</span>
+                                <span><i data-lucide="maximize"></i> 10 Marla</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="1">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-id="2" data-type="apartment" data-purpose="sale"
+                        data-price="14500000" data-location="gulberg lahore" data-featured="1">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                                alt="Elegant modern apartment living room" loading="lazy">
+                            <span class="property-badge">Popular</span>
+                            <button class="favorite-btn" type="button"
+                                aria-label="Add Luxury City Apartment to favorites" aria-pressed="false"><i
+                                    data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> Gulberg, Lahore</div>
+                            <h3>Luxury City Apartment</h3>
+                            <p class="property-price">PKR 1.45 Crore</p>
+                            <div class="property-features">
+                                <span><i data-lucide="bed-double"></i> 3 Beds</span>
+                                <span><i data-lucide="bath"></i> 2 Baths</span>
+                                <span><i data-lucide="maximize"></i> 1,800 Sq Ft</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="2">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-id="3" data-type="villa" data-purpose="rent" data-price="250000"
+                        data-location="bahria town lahore" data-featured="0">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=85"
+                                alt="Beautiful contemporary villa exterior" loading="lazy">
+                            <button class="favorite-btn" type="button" aria-label="Add Garden View Villa to favorites"
+                                aria-pressed="false"><i data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Rent</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> Bahria Town, Lahore</div>
+                            <h3>Garden View Villa</h3>
+                            <p class="property-price">PKR 2.5 Lac <small>/ month</small></p>
+                            <div class="property-features">
+                                <span><i data-lucide="bed-double"></i> 4 Beds</span>
+                                <span><i data-lucide="bath"></i> 4 Baths</span>
+                                <span><i data-lucide="maximize"></i> 1 Kanal</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="3">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-id="4" data-type="house" data-purpose="sale"
+                        data-price="18500000" data-location="johar town lahore" data-featured="0">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                                alt="Beautiful modern house with open living spaces" loading="lazy">
+                            <button class="favorite-btn" type="button"
+                                aria-label="Add Contemporary Family Home to favorites" aria-pressed="false"><i
+                                    data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> Johar Town, Lahore</div>
+                            <h3>Contemporary Family Home</h3>
+                            <p class="property-price">PKR 1.85 Crore</p>
+                            <div class="property-features">
+                                <span><i data-lucide="bed-double"></i> 4 Beds</span>
+                                <span><i data-lucide="bath"></i> 3 Baths</span>
+                                <span><i data-lucide="maximize"></i> 10 Marla</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="4">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-id="5" data-type="commercial" data-purpose="rent"
+                        data-price="180000" data-location="gulberg lahore" data-featured="0">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+                                alt="Professional commercial office space" loading="lazy">
+                            <button class="favorite-btn" type="button"
+                                aria-label="Add Executive Office Space to favorites" aria-pressed="false"><i
+                                    data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Rent</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> Gulberg, Lahore</div>
+                            <h3>Executive Office Space</h3>
+                            <p class="property-price">PKR 1.8 Lac <small>/ month</small></p>
+                            <div class="property-features">
+                                <span><i data-lucide="building-2"></i> Office</span>
+                                <span><i data-lucide="bath"></i> 2 Baths</span>
+                                <span><i data-lucide="maximize"></i> 2,000 Sq Ft</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="5">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="property-card" data-id="6" data-type="apartment" data-purpose="sale"
+                        data-price="8500000" data-location="askari lahore" data-featured="0">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+                                alt="Bright modern apartment interior with elegant furnishings" loading="lazy">
+                            <button class="favorite-btn" type="button"
+                                aria-label="Add Cozy Urban Apartment to favorites" aria-pressed="false"><i
+                                    data-lucide="heart"></i></button>
+                            <span class="image-purpose">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i data-lucide="map-pin"></i> Askari, Lahore</div>
+                            <h3>Cozy Urban Apartment</h3>
+                            <p class="property-price">PKR 85 Lac</p>
+                            <div class="property-features">
+                                <span><i data-lucide="bed-double"></i> 2 Beds</span>
+                                <span><i data-lucide="bath"></i> 2 Baths</span>
+                                <span><i data-lucide="maximize"></i> 1,200 Sq Ft</span>
+                            </div>
+                            <button class="property-details-btn" type="button" data-property-details="6">View Details <i
+                                    data-lucide="arrow-up-right"></i></button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="no-results" id="noResults" hidden>
+                    <i data-lucide="search-x"></i>
+                    <h3>No properties found</h3>
+                    <p>Try changing your search terms or filters.</p>
+                    <button type="button" class="btn btn-primary" id="resetSearch">Reset Filters</button>
+                </div>
+
+                <div class="properties-bottom">
+                    <button type="button" class="btn btn-outline-dark" id="loadMoreProperties">Explore All Properties <i
+                            data-lucide="arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section categories-section" id="categories">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <span class="eyebrow">FIND YOUR PERFECT FIT</span>
+                    <h2>Browse by <span>Category</span></h2>
+                    <p>From cozy apartments to spacious commercial spaces, find the property that suits your plans.</p>
+                </div>
+
+                <div class="category-grid">
+                    <button type="button" class="category-card" data-category="house">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
+                            alt="Houses" loading="lazy">
+                        <span class="category-overlay"></span>
+                        <span class="category-content"><i data-lucide="house"></i><strong>Houses</strong><small>Family
+                                living</small></span>
+                        <i data-lucide="arrow-up-right" class="category-arrow"></i>
+                    </button>
+
+                    <button type="button" class="category-card" data-category="apartment">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80"
+                            alt="Apartments" loading="lazy">
+                        <span class="category-overlay"></span>
+                        <span class="category-content"><i
+                                data-lucide="building-2"></i><strong>Apartments</strong><small>Modern city
+                                living</small></span>
+                        <i data-lucide="arrow-up-right" class="category-arrow"></i>
+                    </button>
+
+                    <button type="button" class="category-card" data-category="villa">
+                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=600&q=80"
+                            alt="Luxury villas" loading="lazy">
+                        <span class="category-overlay"></span>
+                        <span class="category-content"><i data-lucide="trees"></i><strong>Luxury
+                                Villas</strong><small>Space and privacy</small></span>
+                        <i data-lucide="arrow-up-right" class="category-arrow"></i>
+                    </button>
+
+                    <button type="button" class="category-card" data-category="commercial">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
+                            alt="Commercial properties" loading="lazy">
+                        <span class="category-overlay"></span>
+                        <span class="category-content"><i
+                                data-lucide="briefcase-business"></i><strong>Commercial</strong><small>Business
+                                spaces</small></span>
+                        <i data-lucide="arrow-up-right" class="category-arrow"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-visual">
+                    <div class="about-main-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85"
+                            alt="Elegant modern home interior" loading="lazy">
+                    </div>
+                    <div class="about-experience">
+                        <i data-lucide="award"></i>
+                        <strong>12+</strong>
+                        <span>Years of Excellence</span>
+                    </div>
+                    <div class="about-image-caption"><i data-lucide="check-circle"></i> Finding homes, building trust.
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="eyebrow">ABOUT ESTATEORA</span>
+                    <h2>More Than Properties.<br><span>We Find Your Place.</span></h2>
+                    <p class="about-lead">Finding the right property is about more than walls and a roof. It's about
+                        discovering a place where your future takes shape.</p>
+                    <p>At Estateora, we make property decisions simpler through personalized guidance, carefully
+                        selected listings, and a commitment to understanding what matters most to you.</p>
+
+                    <div class="about-points">
+                        <div><i data-lucide="badge-check"></i><span><strong>Trusted Guidance</strong><small>Support
+                                    throughout your property journey.</small></span></div>
+                        <div><i data-lucide="search-check"></i><span><strong>Carefully Selected
+                                    Listings</strong><small>Options tailored to your requirements.</small></span></div>
+                        <div><i data-lucide="handshake"></i><span><strong>Client-First Service</strong><small>Clear
+                                    communication and personal attention.</small></span></div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Learn More About Us <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <span class="eyebrow">HOW WE HELP</span>
+                    <h2>Real Estate Made <span>Simpler</span></h2>
+                    <p>Personalized services to help you make confident property decisions.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon"><i data-lucide="house"></i></div>
+                        <h3>Buy a Property</h3>
+                        <p>Explore suitable homes and properties with guidance through your buying journey.</p>
+                        <a href="#properties" class="text-link">Find a Home <i data-lucide="arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i data-lucide="key-round"></i></div>
+                        <h3>Rent a Property</h3>
+                        <p>Find a comfortable home or practical business space that matches your needs.</p>
+                        <a href="#properties" class="text-link">Browse Rentals <i data-lucide="arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i data-lucide="badge-dollar-sign"></i></div>
+                        <h3>Sell Your Property</h3>
+                        <p>Present your property to potential buyers with professional assistance.</p>
+                        <a href="#contact" class="text-link">Discuss Selling <i data-lucide="arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i data-lucide="chart-no-axes-combined"></i></div>
+                        <h3>Investment Guidance</h3>
+                        <p>Explore property opportunities based on your goals and investment preferences.</p>
+                        <a href="#contact" class="text-link">Talk to Our Team <i data-lucide="arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section why-section">
+            <div class="container why-grid">
+                <div class="why-content">
+                    <span class="eyebrow">THE ESTATEORA DIFFERENCE</span>
+                    <h2>A Better Way to Find <span>Your Next Property.</span></h2>
+                    <p>Property decisions deserve attention, transparency, and a team that understands your priorities.
+                    </p>
+
+                    <div class="why-list">
+                        <div class="why-item"><span class="why-number">01</span>
+                            <div>
+                                <h3>Personalized Recommendations</h3>
+                                <p>Explore options that align with your budget, location, and lifestyle.</p>
+                            </div>
+                        </div>
+                        <div class="why-item"><span class="why-number">02</span>
+                            <div>
+                                <h3>Clear Communication</h3>
+                                <p>Understand your options with straightforward, helpful guidance.</p>
+                            </div>
+                        </div>
+                        <div class="why-item"><span class="why-number">03</span>
+                            <div>
+                                <h3>Support at Every Step</h3>
+                                <p>Get assistance from the initial search through the next steps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-visual">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+                        alt="Refined contemporary residential interior" loading="lazy">
+                    <div class="why-floating-card"><i data-lucide="heart-handshake"></i>
+                        <div><strong>Your Goals Come First</strong><span>Property guidance with a personal touch.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section agents-section" id="agents">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">MEET YOUR PROPERTY PARTNERS</span>
+                        <h2>People Who Put <span>You First</span></h2>
+                        <p>Meet our sample agent profiles and connect with the right property specialist.</p>
+                    </div>
+                    <a href="#contact" class="text-link">Contact Our Team <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <div class="agents-grid">
+                    <article class="agent-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85"
+                            alt="Real estate agent Ahmed Khan" loading="lazy">
+                        <div class="agent-info">
+                            <span class="agent-role">Senior Property Consultant</span>
+                            <h3>Ahmed Khan</h3>
+                            <p><i data-lucide="map-pin"></i> Lahore, Pakistan</p>
+                            <a href="#contact" class="agent-contact" aria-label="Contact Ahmed Khan"><i
+                                    data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="agent-card">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=85"
+                            alt="Real estate agent Sara Malik" loading="lazy">
+                        <div class="agent-info">
+                            <span class="agent-role">Residential Property Expert</span>
+                            <h3>Sara Malik</h3>
+                            <p><i data-lucide="map-pin"></i> Lahore, Pakistan</p>
+                            <a href="#contact" class="agent-contact" aria-label="Contact Sara Malik"><i
+                                    data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="agent-card">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85"
+                            alt="Real estate agent Usman Ali" loading="lazy">
+                        <div class="agent-info">
+                            <span class="agent-role">Investment Consultant</span>
+                            <h3>Usman Ali</h3>
+                            <p><i data-lucide="map-pin"></i> Lahore, Pakistan</p>
+                            <a href="#contact" class="agent-contact" aria-label="Contact Usman Ali"><i
+                                    data-lucide="arrow-up-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <span class="eyebrow">CLIENT EXPERIENCES</span>
+                    <h2>Words That <span>Build Trust</span></h2>
+                    <p>Sample testimonials illustrating the customer experience this website is designed to present.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"The team made it easy to explore different options and understand what worked for my family.
+                            The experience felt organized from start to finish."</p>
+                        <div class="testimonial-person">
+                            <div class="testimonial-avatar">MK</div>
+                            <div><strong>Muhammad Kamran</strong><span>Home Buyer</span></div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card featured-testimonial">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"The guidance was clear, the communication was helpful, and I felt more confident comparing
+                            properties that matched my requirements."</p>
+                        <div class="testimonial-person">
+                            <div class="testimonial-avatar">AF</div>
+                            <div><strong>Ayesha Farooq</strong><span>Property Client</span></div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"I appreciated having a team that listened to my priorities and helped me explore relevant
+                            property options without unnecessary complexity."</p>
+                        <div class="testimonial-person">
+                            <div class="testimonial-avatar">HA</div>
+                            <div><strong>Hassan Ahmed</strong><span>Property Investor</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-inner">
+                <div>
+                    <span class="eyebrow">YOUR NEXT CHAPTER AWAITS</span>
+                    <h2>Ready to Find Your <span>Dream Property?</span></h2>
+                    <p>Tell us what you're looking for, and let's explore your options together.</p>
+                </div>
+                <a href="#contact" class="btn btn-gold">Let's Get Started <i data-lucide="arrow-up-right"></i></a>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-content">
+                    <span class="eyebrow">LET'S TALK PROPERTY</span>
+                    <h2>Tell Us What <span>You're Looking For.</span></h2>
+                    <p>Buying, renting, selling, or exploring your options? Send us a message and tell us how we can
+                        help.</p>
+
+                    <div class="contact-detail">
+                        <span class="contact-icon"><i data-lucide="map-pin"></i></span>
+                        <div><strong>Visit Our Office</strong>
+                            <p>Gulberg, Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-icon"><i data-lucide="phone"></i></span>
+                        <div><strong>Call Our Team</strong>
+                            <p><a href="tel:+923001234567">+92 300 1234567</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-icon"><i data-lucide="mail"></i></span>
+                        <div><strong>Email Us</strong>
+                            <p><a href="mailto:hello@estateora.com">hello@estateora.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-icon"><i data-lucide="clock"></i></span>
+                        <div><strong>Office Hours</strong>
+                            <p>Monday – Saturday, 9 AM – 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>Send Us a Message</h3>
+                    <p>Fill out the form below and tell us about your property needs.</p>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="name" placeholder="Your full name"
+                                autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="+92 300 1234567"
+                                autocomplete="tel">
+                        </div>
+                        <div class="form-field">
+                            <label for="contactInterest">I'm Interested In</label>
+                            <select id="contactInterest" name="interest" required>
+                                <option value="">Choose an option</option>
+                                <option value="buy">Buying a property</option>
+                                <option value="rent">Renting a property</option>
+                                <option value="sell">Selling a property</option>
+                                <option value="investment">Property investment</option>
+                                <option value="other">Other inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" name="message" rows="5"
+                            placeholder="Tell us about your requirements, preferred location, budget, or questions..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary contact-submit">Send Message <i
+                            data-lucide="send"></i></button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand-column">
+                <a href="#home" class="brand footer-brand">
+                    <span class="brand-icon"><i data-lucide="building-2"></i></span>
+                    <span>Estate<span class="brand-accent">ora</span></span>
+                </a>
+                <p>Your journey to the right property starts with the right people. Discover spaces that fit your life,
+                    plans, and ambitions.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#properties">Properties</a>
+                <a href="#agents">Our Agents</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3>Property Types</h3>
+                <a href="#categories" data-footer-category="house">Houses</a>
+                <a href="#categories" data-footer-category="apartment">Apartments</a>
+                <a href="#categories" data-footer-category="villa">Luxury Villas</a>
+                <a href="#categories" data-footer-category="commercial">Commercial Spaces</a>
+                <a href="#services">Our Services</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Let's Stay Connected</h3>
+                <p>Have a property question or a project in mind? Get in touch with our team.</p>
+                <a href="mailto:hello@estateora.com" class="footer-email"><i data-lucide="mail"></i>
+                    hello@estateora.com</a>
+                <a href="tel:+923001234567" class="footer-email"><i data-lucide="phone"></i> +92 300 1234567</a>
+                <a href="#contact" class="btn btn-gold footer-contact-btn">Contact Us <i
+                        data-lucide="arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="currentYear"></span> Estateora Real Estate. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#home">Privacy Policy</a>
+                <a href="#home">Terms of Service</a>
+            </div>
+        </div>
+
+        <div class="powered-by-section">
+            <div class="container powered-by-inner">
+                <div class="powered-by-label">
+                    <span>Designed & Developed by</span>
+                    <a href="https://arslan-weblab.netlify.app" target="_blank" rel="noopener noreferrer"
+                        class="powered-brand">
+                        <span class="powered-brand-icon"><img src="logo.webp" alt=""></i></span>
+                        <span>Arslan <strong>Weblab</strong></span>
+                    </a>
+                </div>
+
+                <p>Crafting modern digital experiences.</p>
+
+                <div class="powered-links">
+                    <a href="https://arslan-weblab.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                    <a href="https://github.com/arslansahil859-alt" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://myprojects-hub.netlify.app" target="_blank" rel="noopener noreferrer">Projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="demo-notice">
+            <strong>Demo Project</strong>
+            <span>This website is a frontend demo created for portfolio purposes.</span>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <span>↑</span>
+    </button>
+
+    <div class="toast-message" id="toastMessage" role="status" aria-live="polite"></div>
+
+    <div class="modal-overlay" id="propertyModal" aria-hidden="true">
+        <div class="property-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-header">
+                <span class="eyebrow">PROPERTY DETAILS</span>
+                <div class="modal-controls">
+                    <button type="button" id="minimizeModal" aria-label="Minimize property details"><i
+                            data-lucide="minus"></i></button>
+                    <button type="button" id="closeModal" aria-label="Close property details"><i
+                            data-lucide="x"></i></button>
+                </div>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
